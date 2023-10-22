@@ -170,11 +170,13 @@
         <section class="formulario">
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
-                    <form method="post" action="envia.php">
-                        <input type="text" name="nome" id="name" placeholder="Seu nome:" required>
+                    <form method="post" action="https://api.staticforms.xyz/submit">
+                        <input type="hidden" name="accessKey" value="7bc57246-21b7-4573-86f6-ccf6ff408a5d">
+                        <input type="hidden" name="redirectTo" value="projetodeportfolio-ericdev.netlify.app">
+                        <input type="text" name="name" id="name" placeholder="Seu nome:" required>
                         <input type="email" name="email" id="mail" placeholder="Seu email:" required>
-                        <input type="phone" name="celular" id="phone" placeholder="Seu celular:">
-                        <textarea name="mensagem" id="mensage" placeholder="Sua mensagem" required></textarea>
+                        <input type="phone" name="phone" id="phone" placeholder="Seu celular:">
+                        <textarea name="message" id="mensage" placeholder="Sua mensagem" required></textarea>
                         <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                     </form>
             </div><!--interface-->
