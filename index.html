@@ -164,12 +164,12 @@
             </div><!--interface-->
         </section><!-- portfolio -->
 
-        <section class="formulario">
+        <section class="formulario" id ="formulario">
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
                     <form method="post" action="https://api.staticforms.xyz/submit" id="form">
                         <input type="hidden" name="accessKey" value="7bc57246-21b7-4573-86f6-ccf6ff408a5d">
-                        <input type="hidden" name="redirectTo" value="https://projetodeportfolio-ericdev.netlify.app/" oninput="(exibirAlerta())">
+                        <input type="hidden" name="redirectTo" value="https://projetodeportfolio-ericdev.netlify.app/#formulario">
                         <div class="campo">
                             <div class="input">
                                 <input class="input-required" type="text" name="name" id="required" placeholder="Seu nome:" required oninput="checknome()">
@@ -185,7 +185,7 @@
 
                         <div class="campo">
                             <div class="input">
-                                <input class="input-required" type="email" id="required" placeholder="Seu email:" required oninput="checkmail()">
+                                <input class="input-required" type="email" name="email" id="required" placeholder="Seu email:" required oninput="checkmail()">
                             </div>
                             <span class="error">
                                 <i class="bi bi-exclamation-circle-fill"></i>
@@ -211,7 +211,7 @@
 
                         <textarea name="message" id="#" placeholder="Sua mensagem" required></textarea>
 
-                        <div class="btn-enviar"><input type="submit" value="ENVIAR" ></div>
+                        <div class="btn-enviar"><input type="submit" value="ENVIAR" onclick="exibirAlerta()"></div>
                     </form> 
             </div><!--interface-->
         </section><!--formulario-->
