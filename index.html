@@ -15,10 +15,7 @@
     <!--FIM BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="style.css">
     
-    <script src="menu.js" defer></script>
-
-    <title>Eric SIlva</title>
-    
+    <script src="scripts.js" defer></script>
     <link rel="shortcut icon" href="https://icons.getbootstrap.com/assets/icons/person-circle.svg" type="image/x-icon">
 </head>
 <body>
@@ -170,15 +167,53 @@
         <section class="formulario">
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
-                    <form method="post" action="https://api.staticforms.xyz/submit">
+                    <form method="post" action="https://api.staticforms.xyz/submit" id="form">
                         <input type="hidden" name="accessKey" value="7bc57246-21b7-4573-86f6-ccf6ff408a5d">
-                        <input type="hidden" name="redirectTo" value="projetodeportfolio-ericdev.netlify.app">
-                        <input type="text" name="name" id="name" placeholder="Seu nome:" required>
-                        <input type="email" name="email" id="mail" placeholder="Seu email:" required>
-                        <input type="phone" name="phone" id="phone" placeholder="Seu celular:">
-                        <textarea name="message" id="mensage" placeholder="Sua mensagem" required></textarea>
-                        <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                    </form>
+                        <input type="hidden" name="redirectTo" value="https://projetodeportfolio-ericdev.netlify.app/">
+
+                        <div class="campo">
+                            <div class="input">
+                                <input class="input-required" type="text" name="name" id="required" placeholder="Seu nome:" required oninput="checknome()">
+                            </div>
+                            <span class="error">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                                <p>O nome deve conter no mínimo 3 letras.</p>
+                            </span>
+                            <span class="check">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </span>
+                        </div><!-- campo -->
+
+                        <div class="campo">
+                            <div class="input">
+                                <input class="input-required" type="email" id="required" placeholder="Seu email:" required oninput="checkmail()">
+                            </div>
+                            <span class="error">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                                <p>Insira um e-mail válido.</p>
+                            </span>
+                            <span class="check">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </span>
+                        </div><!-- campo -->
+
+                        <div class="campo">
+                            <div class="input">
+                                <input class="input-required" type="tel" name="phone"id="required" placeholder="Seu celular:" oninput="checkcelular()">
+                            </div>
+                            <span class="error">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                                <p>Insira um número válido</p>
+                            </span>
+                            <span class="check">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </span>
+                        </div><!-- campo -->
+
+                        <textarea name="message" id="#" placeholder="Sua mensagem" required></textarea>
+
+                        <div class="btn-enviar"><input type="submit" value="ENVIAR" onclick="exibirAlerta()"></div>
+                    </form> 
             </div><!--interface-->
         </section><!--formulario-->
 
